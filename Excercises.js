@@ -5,7 +5,7 @@ function addNumbers(num1 = 0, num2 = 0) {
 }
 //2. Create a method called sayHello with 2 parameters, name and greeting. The function should log the greeting followed by the name. The greeting parameter should default to "Hello".
 function sayHello(name, greeting = "Hello") {
-    console.log(`${greeting} {$name}`);
+    console.log(`${greeting} ${name}`);
 }
 
 //Arrow Functions
@@ -59,7 +59,7 @@ const getPersonTitleArrow = person => {
 //Exceptions
 //1. Create a function called divide that takes 2 numbers as parameters. The function should divide the first number by the second number and return the result. If the second number is a 0, the function should throw an Error object.
 function divide(num1, num2) {
-    if (num2 == "0") {
+    if (num2 == 0) {
         throw new Error("cannot divide by 0")
     }
     return num1 / num2;
@@ -70,7 +70,7 @@ function divide(num1, num2) {
 try {
     console.log(divide(10, 0));
 } catch (e) {
-    console.log(e);
+    console.log(e.message);
 }
 
 console.log("it has continued")
